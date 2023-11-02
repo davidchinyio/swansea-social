@@ -14,9 +14,10 @@ class ProfileTableSeeder extends Seeder
     public function run(): void
     {
         $p = new Profile;
-        $p->name = "Anthony Martial";
-        $p->email = "AM9@gmail.com";
+        $p->name = "Abbey Hughes";
+        $p->email = "abbeythughes@gmail.com";
         $p->save();
 
+        Profile::factory()->count(100)->create();
     }
 }
