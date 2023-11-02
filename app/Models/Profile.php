@@ -12,4 +12,8 @@ class Profile extends Model
         'name',
         'email_address',
     ];
+
+    public function footballTeam() {
+        return $this->hasOne(FootballTeam::class);
+    }
 }

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class FootballTeam extends Model
 {
     use HasFactory;
+
+    public function profile() {
+        return $this->belongsTo(Profile::class);
+    }
 }
