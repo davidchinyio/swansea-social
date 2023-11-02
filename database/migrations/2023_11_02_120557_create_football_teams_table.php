@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('football_teams', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('nickname');
+            $table->bigInteger('profile_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('profile_id')->references('id')->on('profiles')
+                ->onDelete('cascade')->onUpdate('cascade');
+
         });
     }
 
