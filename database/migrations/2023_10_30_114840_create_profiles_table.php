@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('name'); 
             $table->string('email');
             $table->timestamps();
-            $table->bigInteger('enclosure_id')->unsigned();
+            $table->bigInteger('supporters_group_id')->unsigned();
 
-            $table->foreign('enclosure_id')->references('id')->on('supporters_group')
+            $table->foreign('supporters_group_id')->references('id')->on('supporters_group')
                 ->onDelete('cascade')->onUpdate('cascade');
 
         });
