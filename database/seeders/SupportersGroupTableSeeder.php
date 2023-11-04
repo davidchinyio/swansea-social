@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\SupportersGroup;
+
 
 class SupportersGroupTableSeeder extends Seeder
 {
@@ -31,5 +33,6 @@ class SupportersGroupTableSeeder extends Seeder
         $d = new SupportersGroup;
         $d->name = "Finding Timo";
         $d->save();
+
     }
 }

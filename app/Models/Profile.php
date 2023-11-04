@@ -8,12 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-        'email_address',
-    ];
+    // protected $fillable = [
+    //     'name',
+    //     'email_address',
+    // ];
 
-    public function footballTeam() {
-        return $this->hasOne(FootballTeam::class);
+    // public function backupAccount() {
+    //     return $this->hasOne(BackupAccount::class);
+    // }
+
+    public function supportersGroup() {
+        //return $this->belongsTo('App\SupportersGroupTableSeeder');
+        return $this->belongsTo('App\SupportersGroup');
+
     }
 }

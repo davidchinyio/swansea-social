@@ -18,8 +18,8 @@ class ProfileFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail()
-            
+            'email' => fake()->unique()->safeEmail(),
+            'supporters_group_id'=> 1,
         ];
     }
 }

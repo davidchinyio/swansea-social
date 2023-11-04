@@ -17,8 +17,12 @@ return new class extends Migration
             $table->string('email');
             $table->timestamps();
             $table->bigInteger('supporters_group_id')->unsigned();
+            // $table->bigInteger('football_teams_profile_id')->unsigned();
+            
+            // $table->foreign('football_teams_profile_id')->references('id')->on('football_teams')
+            //     ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->foreign('supporters_group_id')->references('id')->on('supporters_group')
+            $table->foreign('supporters_group_id')->references('id')->on('supporters_groups')
                 ->onDelete('cascade')->onUpdate('cascade');
 
         });

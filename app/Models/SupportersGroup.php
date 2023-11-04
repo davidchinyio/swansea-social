@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class SupportersGroup extends Model
 {
     use HasFactory;
+    public function profiles(){
+        return $this->hasMany('App\Profile');
+    }
 }
